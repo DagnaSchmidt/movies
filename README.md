@@ -1,82 +1,87 @@
-## Example app using MongoDB
+<a name="readme-top"></a>
 
-[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
+<div align="right">
 
-If you want to learn more about MongoDB, visit the following pages:
+[![Stargazers][stars-shield]][stars-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+    
+</div>
 
-- [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
 
-## Deploy your own
+<br />
+<div align="center">
+    <img src="./screens//logo-boring-stories.png" alt="Logo" width="880">
 
-Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+  <h3 align="center">Movies4you</h3>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
+  <p align="center">
+    <br />
+    <br />
+    <a href="https://boring-stories.netlify.app">View Demo</a>
+    ·
+    <a href="https://dribbble.com/shots/23009539-Movies4you-UI">View UI design</a>
+  </p>
+</div>
 
-## How to use
+## About The Project
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+</br>
 
-```bash
-npx create-next-app --example with-mongodb with-mongodb-app
-```
+<div align="center">
+    <img src="./screens//stories-mobile_1.png" alt="Logo" width="280">
+    <img src="./screens//stories-mobile_2.png" alt="Logo" width="280">
+    <img src="./screens//stories-mobile_4.png" alt="Logo" width="280">
+</div>
 
-```bash
-yarn create next-app --example with-mongodb with-mongodb-app
-```
+</br>
 
-```bash
-pnpm create next-app --example with-mongodb with-mongodb-app
-```
+<p>Explore the world of cinema like never before with Movies4You, a stunning mobile app that redefines your movie-watching experience. Navigate effortlessly through a seamless design crafted for a delightful user experience..</p>
 
-## Configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Set up a MongoDB database
+### Built With
 
-Set up a MongoDB database either locally or with [MongoDB Atlas for free](https://mongodb.com/atlas).
+<img src="{https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white}" />
 
-### Set up environment variables
+<h5>UI design</h5>
 
-Copy the `env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
+![Figma]
 
-```bash
-cp .env.local.example .env.local
-```
+<h5>Frontend</h5>
 
-Set each variable on `.env.local`:
+![React]
+![React-Router]
+![Redux]
+![Axios]
+![Tailwind]
+![Framer]
 
-- `MONGODB_URI` - Your MongoDB connection string. If you are using [MongoDB Atlas](https://mongodb.com/atlas) you can find this by clicking the "Connect" button for your cluster.
+<h5>Backend</h5>
 
-### Run Next.js in development mode
+![Express]
+![MongoDB]
 
-```bash
-npm install
-npm run dev
+<h5>Deployed</h5>
 
-# or
+![Netlify]
 
-yarn install
-yarn dev
-```
 
-Your app should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You will either see a message stating "You are connected to MongoDB" or "You are NOT connected to MongoDB". Ensure that you have provided the correct `MONGODB_URI` environment variable.
 
-When you are successfully connected, you can refer to the [MongoDB Node.js Driver docs](https://mongodb.github.io/node-mongodb-native/3.4/tutorials/collections/) for further instructions on how to query your database.
-
-## Deploy on Vercel
-
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-#### Deploy Your Local Project
-
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
-
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
-
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[stars-shield]: https://img.shields.io/github/stars/DagnaSchmidt/boring-stories.svg?style=for-the-badge
+[stars-url]: https://github.com/DagnaSchmidt/boring-stories/stargazers
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/dagna-schmidt-90ba37207
+[Figma]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
+[React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-Router]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[Redux]: https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white
+[Axios]: https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white
+[Tailwind]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Framer]: https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue
+[Express]: https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+[MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[Netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white

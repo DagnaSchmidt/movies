@@ -1,6 +1,8 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
+import BottomNav from "../components/navs/bottomNav/bottomNav";
+
 
 type ConnectionStatus = {
   isConnected: boolean;
@@ -38,7 +40,7 @@ export default function Home({
       </main>
 
       <footer>
-
+        <BottomNav />
       </footer>
     </div>
   );

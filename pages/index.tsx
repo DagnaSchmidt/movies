@@ -1,7 +1,10 @@
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
+
+//components
 import BottomNav from "../components/navs/bottomNav/bottomNav";
+import TopNav from "../components/navs/topNav/topNav";
 
 
 type ConnectionStatus = {
@@ -34,6 +37,10 @@ export default function Home({
         <title>Movies4you</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <header>
+        <TopNav />
+      </header>
 
       <main>
 

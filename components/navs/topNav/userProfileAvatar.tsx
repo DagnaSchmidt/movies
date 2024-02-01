@@ -10,7 +10,7 @@ export default function UserProfileAvatar() {
 
     if (!isLoggedIn) {
         return (
-            <div className="flex flex-col gap-1 justify-center items-center">
+            <div className="flex flex-col gap-1 justify-center items-center hover:cursor-pointer">
                 <Icon name='User' fill='fill-white' />
                 <p className="text-xs text-white">login</p>
             </div>

@@ -10,7 +10,7 @@
 
 <br />
 <div align="center">
-    <img src="./screens//logo-boring-stories.png" alt="Logo" width="880">
+    <img src="./screens//movies.png" alt="Logo" width="880">
 
   <h3 align="center">Movies4you</h3>
 
@@ -28,9 +28,11 @@
 </br>
 
 <div align="center">
-    <img src="./screens//stories-mobile_1.png" alt="Logo" width="280">
-    <img src="./screens//stories-mobile_2.png" alt="Logo" width="280">
-    <img src="./screens//stories-mobile_4.png" alt="Logo" width="280">
+    <img src="./screens//movies-mobile_1.png" alt="Logo" width="280">
+    <img src="./screens//movies-mobile_3.png" alt="Logo" width="280">
+    <img src="./screens//movies-mobile_4.png" alt="Logo" width="280">
+    <img src="./screens//movies-mobile_6.png" alt="Logo" width="280">
+    <img src="./screens//movies-mobile_7.png" alt="Logo" width="280">
 </div>
 
 </br>

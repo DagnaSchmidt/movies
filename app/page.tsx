@@ -1,8 +1,16 @@
 "use client"
+
+//components
 import ArticleCard from "../components/cards/articleCard";
 import ArticleCardSmall from "../components/cards/articleCardSmall";
 
+//services
+import { checkAuth } from "../services/movies";
+
 export default function Home() {
+
+    const data = checkAuth();
+    console.log(data);
 
     return (
         <main className="flex min-h-screen w-screen max-w-[1024px] flex-col items-center pt-24 md:px-12 bg-black">

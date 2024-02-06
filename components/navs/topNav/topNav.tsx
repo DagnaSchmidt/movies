@@ -6,7 +6,7 @@ import UserProfileAvatar from "./userProfileAvatar";
 
 export default function TopNav() {
     return (
-        <div className="absolute top-0 max-w-[1024px] right-0 left-0 m-auto h-20 w-full py-4 px-6 bg-black flex justify-between">
+        <div className="absolute top-0 max-w-[1024px] right-0 left-0 m-auto h-20 w-full py-4 px-6 md:px-12 bg-black flex justify-between">
             <Image
                 src="/movies4you_logo.svg"
                 alt="movies4you logo"

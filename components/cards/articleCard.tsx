@@ -4,7 +4,7 @@ import SmallButton from "../buttons/smallButton";
 
 export default function ArticleCard() {
     return (
-        <div className="w-screen max-w-[1024px] h-64 relative">
+        <div className="w-full max-w-[1024px] h-64 md:h-96 relative">
             <Image
                 alt="article"
                 src="/article.svg"

@@ -17,7 +17,7 @@
   <p align="center">
     <br />
     <br />
-    <a href="https://boring-stories.netlify.app">View Demo</a>
+    <a href="https://movies-dagnas-projects.vercel.app/">View Demo</a>
     ·
     <a href="https://dribbble.com/shots/23009539-Movies4you-UI">View UI design</a>
   </p>

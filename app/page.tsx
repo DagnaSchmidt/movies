@@ -2,14 +2,20 @@
 import SmallButton from "../components/buttons/smallButton";
 import SmallLinkButton from "../components/buttons/smallLinkButton";
 import ArticleCard from "../components/cards/articleCard";
+import ArticleCardSmall from "../components/cards/articleCardSmall";
 
 export default function Home() {
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
-            <ArticleCard />
+        <main className="flex min-h-screen w-screen max-w-[1024px] flex-col items-center pt-24 md:px-12 bg-black">
+            <section className="w-full flex flex-col gap-6">
+                <ArticleCard />
+                <div className="flex gap-6 w-full px-6 md:px-0">
+                    <ArticleCardSmall image="" title="The fruit of Tim Burton's imagination" alt="text" />
+                    <ArticleCardSmall image="" title="The fruit of Tim Burton's imagination" alt="text" />
+                </div>
+            </section>
 
-            <SmallLinkButton text="Show more" handleClick={() => console.log('clicked')} disabled={false} />
         </main>
     );
 }

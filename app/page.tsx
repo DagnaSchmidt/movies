@@ -1,6 +1,4 @@
 "use client"
-import SmallButton from "../components/buttons/smallButton";
-import SmallLinkButton from "../components/buttons/smallLinkButton";
 import ArticleCard from "../components/cards/articleCard";
 import ArticleCardSmall from "../components/cards/articleCardSmall";
 

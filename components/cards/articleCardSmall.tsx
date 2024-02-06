@@ -21,7 +21,7 @@ export default function ArticleCardSmall(props: IArticleCardSmallProps) {
             />
             <div className="absolute flex justify-between gap-8 items-center w-full min-h-16 px-4 py-2 bottom-0 bg-linear">
                 <h5 className="text-black font-bold italic text-sm">{title}</h5>
-                <SmallButton text="" icon={true} disabled={false} handleClick={() => console.log('clicked')} />
+                <SmallButton title={false} text="" icon={true} disabled={false} handleClick={() => console.log('clicked')} />
             </div>
         </div>
     )

@@ -2,13 +2,14 @@ import Icon from "../icons/icon"
 
 interface ISmallButtonProps {
     icon: boolean,
+    title: boolean,
     text: string,
     disabled: boolean
     handleClick: Function
 };
 
 export default function SmallButton(props: ISmallButtonProps) {
-    const { icon, text, handleClick, disabled } = props;
+    const { icon, text, handleClick, disabled, title } = props;
 
     return (
         <button
@@ -17,7 +18,10 @@ export default function SmallButton(props: ISmallButtonProps) {
             onClick={() => handleClick()}
         >
 
-            <p className="text-black font-normal text-nowrap text-sm">{text}</p>
+            {
+                title && <p className="text-black font-normal text-nowrap text-sm">{text}</p>
+            }
+
             {
                 icon && <Icon name='ChevronRight' fill={disabled ? 'fill-neutral300' : 'fill-black'} />
             }

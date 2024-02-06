@@ -5,6 +5,11 @@ import { merriweather } from "./fonts";
 import TopNav from "../components/navs/topNav/topNav";
 import BottomNav from "../components/navs/bottomNav/bottomNav";
 
+export const metadata = {
+    title: 'Movies4you',
+    description: 'Website with movies database.'
+}
+
 export default function RootLayout({
     children,
 }: Readonly<{

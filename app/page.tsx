@@ -1,13 +1,9 @@
 "use client"
 
+import CarouselSection from "../components/sections/carouselSection";
 //components
-import ArticleCard from "../components/cards/articleCard";
-import ArticleCardSmall from "../components/cards/articleCardSmall";
-import MovieCard from "../components/cards/movieCard";
 import ArticlesSection from "../components/sections/home/articlesSection";
 
-//services
-import { checkAuth } from "../services/movies";
 
 export default function Home() {
 
@@ -19,12 +15,10 @@ export default function Home() {
     }
 
     return (
-        <main className="flex min-h-screen w-screen max-w-[1024px] flex-col items-center pt-24 md:px-12 bg-black">
+        <main className="flex min-h-screen w-screen max-w-[1024px] flex-col gap-10 items-center pt-24 md:px-12 bg-black">
             <ArticlesSection />
 
-            <section>
-                <MovieCard {...data} />
-            </section>
+            <CarouselSection title='Featured today' category="movies" />
 
         </main>
     );

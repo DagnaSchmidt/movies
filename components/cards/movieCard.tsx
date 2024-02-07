@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+//components
 import BookmarkIcon from "../icons/bookmarkIcon";
 
 interface IMovieCardProps {
@@ -7,7 +9,6 @@ interface IMovieCardProps {
     alt: string,
     id: string
 }
-
 
 
 export default function MovieCard(props: IMovieCardProps) {

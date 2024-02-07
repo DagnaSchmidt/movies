@@ -1,6 +1,9 @@
 "use client"
 import Image from "next/image";
+
+//components
 import SmallButton from "../buttons/smallButton";
+
 
 export default function ArticleCard() {
     return (

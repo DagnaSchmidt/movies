@@ -1,5 +1,7 @@
 "use client"
 import Image from "next/image";
+
+//components
 import SmallButton from "../buttons/smallButton";
 
 interface IArticleCardSmallProps {

@@ -10,6 +10,20 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.24) 100%);
 }
 
+.bg-dark {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.64) 100%);
+}
+
 .bg-linear {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+/* hide scrollbars class */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

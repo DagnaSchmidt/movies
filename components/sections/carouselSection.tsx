@@ -1,4 +1,6 @@
 "use client"
+import { useEffect, useState } from "react";
+
 
 //types
 import { TListProps } from "../../types/List";
@@ -10,14 +12,15 @@ import MoviesCardSwiper from "../swipers/moviesCardSwiper";
 
 //actions
 import { getList } from "../../services/list";
-import { useEffect, useState } from "react";
+import MovieCardSkeleton from "../cards/movieCardSkeleton";
 
 
 export default function CarouselSection(props: TListProps) {
     const { type, category } = props;
-    const [data, setData] = useState([]);
+
+    const skeleton = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const [data, setData] = useState<object[] | null>(null);
     const [isLoading, setIsLoading] = useState(true);
-    console.log(data);
 
 
     useEffect(() => {
@@ -60,16 +63,11 @@ export default function CarouselSection(props: TListProps) {
                 <SmallLinkButton text='Show more' disabled={false} handleClick={handleClick} />
             </div>
             <MoviesCardSwiper>
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
-                <MovieCard {...data2} />
+                {
+                    isLoading ?
+                        skeleton.map((i, index) => <MovieCardSkeleton key={index} />) :
+                        data !== null && data.map(i => <MovieCard {...i} />)
+                }
             </MoviesCardSwiper>
         </section>
     )

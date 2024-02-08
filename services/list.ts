@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NEXT_PUBLIC_TMDB_KEY, API_URL } from "./config";
+import { NEXT_PUBLIC_TMDB_KEY } from "./config";
 
 //types
 import { TListProps } from "../types/List";

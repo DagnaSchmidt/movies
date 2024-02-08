@@ -3,6 +3,7 @@
 import CarouselSection from "../components/sections/carouselSection";
 //components
 import ArticlesSection from "../components/sections/home/articlesSection";
+import FollowUsSection from "../components/sections/home/followUsSection";
 
 
 export default function Home() {
@@ -19,6 +20,12 @@ export default function Home() {
             <ArticlesSection />
 
             <CarouselSection type='movie' category="popular" />
+
+            <CarouselSection type='tv' category="top_rated" />
+
+            <CarouselSection type='movie' category="upcoming" />
+
+            <FollowUsSection />
 
         </main>
     );

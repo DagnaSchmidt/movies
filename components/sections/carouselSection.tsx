@@ -16,7 +16,7 @@ import MovieCardSkeleton from "../cards/movieCardSkeleton";
 
 
 export default function CarouselSection(props: TListProps) {
-    const { type, category } = props;
+    const { category } = props;
 
     const skeleton = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     const [data, setData] = useState<object[] | null>(null);
@@ -35,15 +35,6 @@ export default function CarouselSection(props: TListProps) {
         }
         fetchData();
     }, []);
-
-
-    //temp data
-    const data2 = {
-        title: 'Arcane',
-        image: '',
-        alt: 'alt',
-        id: 'id1'
-    };
 
     const handleClick = () => { }
 

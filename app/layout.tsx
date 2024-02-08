@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={merriweather.className}>
-                <div className="bg-black flex flex-col justify-center relative">
+                <div className="bg-black flex flex-col items-center">
                     <TopNav />
                     {children}
                     <BottomNav />

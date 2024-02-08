@@ -1,4 +1,5 @@
 import SmallLinkButton from "../buttons/smallLinkButton";
+import MovieCard from "../cards/movieCard";
 import MoviesCardSwiper from "../swipers/moviesCardSwiper";
 
 type CarouselCategory = 'movies' | 'series' | 'list';
@@ -13,6 +14,12 @@ export default function CarouselSection(props: ICarouselSectionProps) {
     const { title, category } = props;
 
     //temp data
+    const data2 = {
+        title: 'Arcane',
+        image: '',
+        alt: 'alt',
+        id: 'id1'
+    };
     const data = [1, 2, 3, 4, 5, 6]
     const handleClick = () => { }
     const cards = data.map(i => <div>item</div>);
@@ -24,7 +31,16 @@ export default function CarouselSection(props: ICarouselSectionProps) {
                 <SmallLinkButton text='Show more' disabled={false} handleClick={handleClick} />
             </div>
             <MoviesCardSwiper>
-                <div>item</div>
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
+                <MovieCard {...data2} />
             </MoviesCardSwiper>
         </section>
     )

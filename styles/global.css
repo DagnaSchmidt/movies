@@ -11,11 +11,7 @@
 }
 
 .bg-dark {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.64) 100%);
-}
-
-.bg-linear {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.08) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.44) 100%);
 }
 
 /* hide scrollbars class */

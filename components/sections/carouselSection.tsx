@@ -1,23 +1,38 @@
 "use client"
 
+//types
+import { TListProps } from "../../types/List";
+
 //components
 import SmallLinkButton from "../buttons/smallLinkButton";
 import MovieCard from "../cards/movieCard";
 import MoviesCardSwiper from "../swipers/moviesCardSwiper";
 
 //actions
-import { getPopularMovies } from "../../services/movies";
+import { getList } from "../../services/list";
+import { useEffect, useState } from "react";
 
-interface ICarouselSectionProps {
-    type: 'movies' | 'series'
-    category: 'popular' | 'upcoming' | 'top' | 'airing'
-};
 
-export default async function CarouselSection(props: ICarouselSectionProps) {
+export default function CarouselSection(props: TListProps) {
     const { type, category } = props;
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    console.log(data);
 
-    // const moviesPopularData = await getPopularMovies();
-    // console.log(moviesPopularData);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const newData = await getList(props);
+                setData(newData);
+                setIsLoading(false);
+            } catch (error) {
+                console.log('error');
+            }
+        }
+        fetchData();
+    }, []);
+
 
     //temp data
     const data2 = {
@@ -26,7 +41,7 @@ export default async function CarouselSection(props: ICarouselSectionProps) {
         alt: 'alt',
         id: 'id1'
     };
-    const data = [1, 2, 3, 4, 5, 6]
+
     const handleClick = () => { }
 
     return (
@@ -38,7 +53,7 @@ export default async function CarouselSection(props: ICarouselSectionProps) {
                             'Featured today' :
                             category === 'upcoming' ?
                                 'Upcoming soon' :
-                                category === 'top' ?
+                                category === 'top_rated' ?
                                     'Top 10' : 'Airing today'
                     }
                 </h5>

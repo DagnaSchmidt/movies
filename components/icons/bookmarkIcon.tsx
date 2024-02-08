@@ -1,11 +1,11 @@
 import { RiBookmarkFill, RiBookmarkLine } from "react-icons/ri";
 
 interface IBookmarkIconProps {
-    id: string
+    id: number
 }
 
 //temp data
-const userList = ['id1', 'id2', 'id3'];
+const userList = [866398, 2, 3];
 const addToUserList = () => { }
 const removeFromUserList = () => { }
 

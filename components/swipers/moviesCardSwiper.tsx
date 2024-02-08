@@ -1,9 +1,16 @@
-export default function MoviesCardSwiper(props: { children: JSX.Element }) {
-    const { children } = props;
+import { ReactNode } from "react";
 
+interface IMoviesCardSwiperProps {
+    children: ReactNode
+};
+
+
+const MoviesCardSwiper: React.FC<IMoviesCardSwiperProps> = ({ children }) => {
     return (
-        <div className="px-4 w-full overflow-x-scroll scrollbar-hide flex gap-3">
+        <div className="w-full px-4 md:px-0 overflow-x-scroll scrollbar-hide flex gap-3">
             {children}
         </div>
     )
 };
+
+export default MoviesCardSwiper;

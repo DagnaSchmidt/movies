@@ -1,5 +1,8 @@
 import axios from "axios";
-import { NEXT_PUBLIC_TMDB_KEY, API_URL } from "./config";
+import { NEXT_PUBLIC_TMDB_KEY } from "./config";
+
+//types
+import { TListProps } from "../types/List";
 
 const config = {
     headers: {
@@ -9,8 +12,8 @@ const config = {
 };
 
 
-export const getPopularMovies = async () => {
-    const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
+export const getList = async (data: TListProps) => {
+    const url = `https://api.themoviedb.org/3/${data.type}/${data.category}?language=en-US&page=1`;
     const response = await axios.get(url, config);
     return response.data.results.slice(0, 10);
 };

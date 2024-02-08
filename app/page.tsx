@@ -15,10 +15,10 @@ export default function Home() {
     }
 
     return (
-        <main className="flex min-h-screen w-screen max-w-[1024px] flex-col gap-10 items-center pt-24 md:px-12 bg-black relative">
+        <main className="flex min-h-screen w-screen max-w-[1024px] flex-col gap-10 items-center md:px-12 bg-black relative">
             <ArticlesSection />
-
-            <CarouselSection title='Featured today' category="movies" />
+            {/* @ts-expect-error Server Component */}
+            <CarouselSection type='movies' category="popular" />
 
         </main>
     );

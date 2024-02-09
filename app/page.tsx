@@ -1,6 +1,5 @@
 "use client"
 
-import SwiperButton from "../components/buttons/swiperButton";
 import CarouselSection from "../components/sections/carouselSection";
 //components
 import ArticlesSection from "../components/sections/home/articlesSection";
@@ -15,6 +14,9 @@ export default function Home() {
         alt: "alt text",
         id: 'id1'
     }
+
+    // const date = new Date('February 05, 2024 14:45:00').toISOString();
+    // console.log(date);
 
     return (
         <main className="flex min-h-screen w-screen max-w-[1024px] flex-col gap-10 items-center md:px-12 bg-black relative">

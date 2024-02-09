@@ -20,7 +20,8 @@ export type TMovieProps = {
     title: string,
     video: boolean,
     vote_average: number,
-    vote_count: number
+    vote_count: number,
+    key: number
 }
 
 export type TSerieProps = {
@@ -36,7 +37,8 @@ export type TSerieProps = {
     popularity: number,
     poster_path: string,
     vote_average: number,
-    vote_count: number
+    vote_count: number,
+    key: number
 }
 
-export type TMovieCardProps = TMovieProps | TSerieProps;
+export type TMovieCardProps = TMovieProps | TSerieProps | null;

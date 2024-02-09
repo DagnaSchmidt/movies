@@ -20,7 +20,9 @@ export default function CarouselSection(props: TListProps) {
 
     const skeleton = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     const [data, setData] = useState<object[] | null>(null);
+    console.log(data);
     const [isLoading, setIsLoading] = useState(true);
+    console.log(data !== null)
 
 
     useEffect(() => {
@@ -55,9 +57,8 @@ export default function CarouselSection(props: TListProps) {
             </div>
             <MoviesCardSwiper>
                 {
-                    isLoading ?
-                        skeleton.map((i, index) => <MovieCardSkeleton key={index} />) :
-                        data !== null && data.map(i => <MovieCard {...i} />)
+                    // @ts-ignore: Unreachable code error
+                    (isLoading && data === null) ? skeleton.map((i, index) => <MovieCardSkeleton key={index} />) : data.map((i, index) => <MovieCard {...i} key={index} />)
                 }
             </MoviesCardSwiper>
         </section>

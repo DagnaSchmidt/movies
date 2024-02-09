@@ -1,5 +1,6 @@
 "use client"
 
+import SwiperButton from "../components/buttons/swiperButton";
 import CarouselSection from "../components/sections/carouselSection";
 //components
 import ArticlesSection from "../components/sections/home/articlesSection";

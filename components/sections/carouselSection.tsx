@@ -40,7 +40,7 @@ export default function CarouselSection(props: TListProps) {
 
     return (
         <section className="w-full flex flex-col gap-2">
-            <div className="flex w-full justify-between px-6 md:px-0">
+            <div className="flex w-full justify-between px-4 md:px-0">
                 <h5 className="text-white font-bold text-xl">
                     {
                         category === 'popular' ?

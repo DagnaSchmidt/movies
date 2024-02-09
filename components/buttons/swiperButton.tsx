@@ -11,11 +11,13 @@ export default function SwiperButton(props: ISwiperButtonProps) {
 
     return (
         <button
-            className="bg-primary w-9 h-9 rounded-full hover:opacity-90 flex justify-center items-center"
+            className={`bg-primary w-9 h-9 rounded-full hover:bg-primary400 ${disabled ? 'hidden' : 'flex'} justify-center items-center border-2 border-black`}
             disabled={disabled}
             onClick={() => handleClick()}
         >
-            <Icon name="ChevronRight" fill="fill-black" />
+            {
+                direction === 'next' ? <Icon name="ChevronRight" fill="fill-black" /> : <Icon name="ChevronLeft" fill="fill-black" />
+            }
         </button>
     )
 }

@@ -24,7 +24,10 @@ const config: Config = {
         "white": "#F9F6EE",
         "facebook": "#4267B2",
         "google": "#DB4437",
-        "amazon": "#FF9900"
+        "amazon": "#FF9900",
+        "instagram": "#C13584",
+        "twitter": "#1DA1F2",
+        "tiktok": "#00f2ea"
       }
     },
   },

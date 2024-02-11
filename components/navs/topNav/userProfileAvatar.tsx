@@ -17,9 +17,18 @@ export default function UserProfileAvatar() {
         )
     } else {
         return (
-            <Link href='/profile' className="h-11 w-11 rounded-full bg-primary">
-                {/* user avatar image here */}
-            </Link>
+            <div className="flex gap-2 justify-end items-center">
+                <Link href="/profile/messages">
+                    {/* envelop icon here */}
+                </Link>
+                <Link href="/profile/notifications">
+                    {/* notifications icon here */}
+                </Link>
+                <Link href="/profile" className="h-11 w-11 rounded-full bg-primary">
+                    {/* user avatar image here */}
+                </Link>
+            </div>
+
         )
     }
 };

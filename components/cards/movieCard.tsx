@@ -21,6 +21,7 @@ export default function MovieCard(props: TMovieCardProps) {
                     alt={poster_path}
                     src={`https://image.tmdb.org/t/p/original${poster_path}`}
                     fill
+                    sizes="128px"
                     className="object-cover rounded-lg"
                 />
                 <div className="absolute right-0 top-0">

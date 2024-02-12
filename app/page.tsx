@@ -8,13 +8,6 @@ import FollowUsSection from "../components/sections/home/followUsSection";
 
 export default function Home() {
 
-    const data = {
-        title: "Arcane",
-        image: "img",
-        alt: "alt text",
-        id: 'id1'
-    }
-
     // const date = new Date('February 05, 2024 14:45:00').toISOString();
     // console.log(date);
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 //components
 import BookmarkIcon from "../icons/bookmarkIcon";
@@ -11,7 +12,10 @@ export default function MovieCard(props: TMovieCardProps) {
     const { poster_path, id } = props;
 
     return (
-        <div className="w-32 h-48 hover:cursor-pointer">
+        <Link
+            className="w-32 h-48 hover:cursor-pointer"
+            href={'title' in props ? `/movies/${id}` : `/series/$id`}
+        >
             <div className="w-32 h-48 relative rounded-lg overflow-hidden group">
                 <Image
                     alt={poster_path}
@@ -26,6 +30,6 @@ export default function MovieCard(props: TMovieCardProps) {
                     <p className="text-sm font-semibold p-1">{'title' in props ? props.title : props.name}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 };

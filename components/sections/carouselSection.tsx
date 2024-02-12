@@ -20,7 +20,7 @@ export default function CarouselSection(props: TListProps) {
 
     const skeleton = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     const [data, setData] = useState<object[] | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
 
     useEffect(() => {

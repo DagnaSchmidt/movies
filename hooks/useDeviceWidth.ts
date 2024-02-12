@@ -1,8 +1,9 @@
+"use client"
 import { useEffect, useState } from 'react';
 
 
 export default function useDeviceWidth() {
-    const [deviceWidth, setDeviceWidth] = useState(window.innerWidth);
+    const [deviceWidth, setDeviceWidth] = useState(0);
 
     useEffect(() => {
         function handleResize() {

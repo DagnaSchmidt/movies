@@ -1,15 +1,9 @@
 import axios from "axios";
-import { NEXT_PUBLIC_TMDB_KEY } from "./config";
 
 //types
 import { TListProps } from "../types/List";
 
-const config = {
-    headers: {
-        accept: 'application/json',
-        Authorization: NEXT_PUBLIC_TMDB_KEY
-    }
-};
+import { config } from "./config";
 
 
 export const getList = async (data: TListProps) => {

@@ -8,7 +8,7 @@ import SingleMovieHeader from "../../../components/sections/movies/singleMovieHe
 //types
 import { TSingleMovieProps } from "../../../types/Movies";
 
-export default function Page() {
+export default function Page({ params }: { params: { id: number } }) {
     const id = 866398;
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<TSingleMovieProps | null>(null);
@@ -17,7 +17,7 @@ export default function Page() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const newData = await getSingleMovieData(id);
+                const newData = await getSingleMovieData(params.id);
                 setData(newData);
                 setIsLoading(false);
             } catch (error) {

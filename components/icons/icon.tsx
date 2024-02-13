@@ -4,6 +4,7 @@ import {
     RiVideoLine,
     RiBookmarkLine,
     RiStarFill,
+    RiStarLine,
     RiBarChartBoxLine,
     RiArrowRightSLine,
     RiArrowLeftSLine
@@ -14,7 +15,7 @@ import {
     MdAdd
 } from "react-icons/md";
 
-type IconName = 'Home' | 'CameraLens' | 'VideoLine' | 'BookmarkLine' | 'ChartBoxLine' | 'User' | 'Add' | 'ChevronRight' | 'ChevronLeft' | 'Star';
+type IconName = 'Home' | 'CameraLens' | 'VideoLine' | 'BookmarkLine' | 'ChartBoxLine' | 'User' | 'Add' | 'ChevronRight' | 'ChevronLeft' | 'Star' | 'StarLine';
 type IconFill = 'fill-primary' | 'fill-white' | 'fill-black' | 'fill-neutral300';
 
 interface IIconProps {
@@ -47,6 +48,8 @@ export default function Icon(props: IIconProps) {
             return <RiArrowLeftSLine className={style} />
         case 'Star':
             return <RiStarFill className={style} />
+        case 'StarLine':
+            return <RiStarLine className={style} />
         default:
             return <RiHomeLine className={style} />
     }

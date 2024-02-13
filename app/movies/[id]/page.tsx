@@ -41,7 +41,7 @@ export default function Page({ params }: { params: { id: number } }) {
             <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7">
                 <SingleMovieHeader {...data} />
 
-                <RatingsSection type='movies' />
+                <RatingsSection type='movies' id={params.id} />
 
                 {/* description */}
 

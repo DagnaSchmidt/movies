@@ -44,4 +44,4 @@ export default function SingleMovieHeader(props: TSingleMovieProps) {
             </div>
         </div>
     )
-}
+};

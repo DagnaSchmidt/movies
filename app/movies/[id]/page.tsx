@@ -7,6 +7,7 @@ import SingleMovieHeader from "../../../components/sections/movies/singleMovieHe
 
 //types
 import { TSingleMovieProps } from "../../../types/Movies";
+import RatingsSection from "../../../components/sections/ratingsSection";
 
 export default function Page({ params }: { params: { id: number } }) {
     const id = 866398;
@@ -37,8 +38,16 @@ export default function Page({ params }: { params: { id: number } }) {
 
     if (data !== null && !isLoading) {
         return (
-            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12">
+            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7">
                 <SingleMovieHeader {...data} />
+
+                <RatingsSection type='movies' id={params.id} />
+
+                {/* description */}
+
+                {/* segment picker */}
+
+
             </div>
         )
     };

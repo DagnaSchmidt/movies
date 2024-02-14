@@ -1,3 +1,4 @@
+import BodyText from "../texts/bodyText";
 import H3 from "../texts/h3";
 
 interface ITextSectionProps {
@@ -10,8 +11,7 @@ export default function TextSection(props: ITextSectionProps) {
     return (
         <section className="flex flex-col px-4 gap-4 pt-6">
             <H3 title={title} />
-            <h5 className="text-white font-bold text-xl">{title}</h5>
-            <p className="text-white text-base font-regular">{text}</p>
+            <BodyText text={text} />
         </section>
     )
 };

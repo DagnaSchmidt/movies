@@ -2,14 +2,26 @@ import Image from "next/image"
 
 //types
 import { TSingleMovieProps } from "../../../types/Movies"
+import { TSingleSerieProps } from "../../../types/Series";
 
 //hooks
 import useTime from "../../../hooks/useTime";
+import { useEffect, useState } from "react";
 
-export default function SingleMovieHeader(props: TSingleMovieProps) {
-    const { poster_path, backdrop_path, title, runtime, release_date } = props;
-    const formattedRuntime = useTime(runtime);
-    const release_year = release_date.slice(0, 4);
+export default function SingleMovieHeader(props: TSingleMovieProps | TSingleSerieProps) {
+    const { poster_path, backdrop_path } = props;
+
+    const [time, setTime] = useState<string>('');
+
+    useEffect(() => {
+        if ('runtime' in props) {
+            setTime(useTime(props.runtime));
+        }
+        if ('episode_run_time' in props) {
+            setTime(useTime(props.episode_run_time[0]));
+        }
+    }, []);
+
 
     return (
         <div className="w-full h-80 md:h-96 relative">
@@ -33,11 +45,15 @@ export default function SingleMovieHeader(props: TSingleMovieProps) {
                     />
                     <div className="self-end px-3 py-2 flex justify-between w-full items-end">
                         <h5 className="text-xl font-bold text-white tracking-wide">
-                            {title}
+                            {'title' in props ? props.title : props.name}
                         </h5>
                         <div className="flex flex-col items-end opacity-80">
-                            <p className="text-white text-sm font-medium">{formattedRuntime}</p>
-                            <p className="text-white text-sm font-medium">{release_year}</p>
+                            <p className="text-white text-sm font-medium">
+                                {time}
+                            </p>
+                            <p className="text-white text-sm font-medium">
+                                {'release_date' in props ? props.release_date.slice(0, 4) : props.first_air_date.slice(0, 4)}
+                            </p>
                         </div>
                     </div>
                 </div>

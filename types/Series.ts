@@ -47,7 +47,7 @@ export type TSingleSerieProps = {
     backdrop_path: string,
     created_by: object[],
     episode_run_time: number[],
-    first_air_date: Date,
+    first_air_date: string,
     genres: object[],
     homepage: string,
     id: number,

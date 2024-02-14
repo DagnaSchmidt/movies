@@ -41,8 +41,8 @@ export default function Page({ params }: { params: { id: number } }) {
     };
 
     return (
-        <div>
-            single series page
+        <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7">
+            <SingleMovieHeader {...data} />
         </div>
     )
 };

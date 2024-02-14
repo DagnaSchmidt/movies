@@ -9,6 +9,7 @@ import { TListProps } from "../../types/List";
 import SmallLinkButton from "../buttons/smallLinkButton";
 import MovieCard from "../cards/movieCard";
 import MoviesCardSwiper from "../swipers/moviesCardSwiper";
+import H3 from "../texts/h3";
 
 //actions
 import { getList } from "../../services/list";
@@ -41,16 +42,7 @@ export default function CarouselSection(props: TListProps) {
     return (
         <section className="w-full flex flex-col gap-2">
             <div className="flex w-full justify-between px-4 md:px-0">
-                <h5 className="text-white font-bold text-xl">
-                    {
-                        category === 'popular' ?
-                            'Featured today' :
-                            category === 'upcoming' ?
-                                'Upcoming soon' :
-                                category === 'top_rated' ?
-                                    'Top 10' : 'Airing today'
-                    }
-                </h5>
+                <H3 title={category === 'popular' ? 'Featured today' : category === 'upcoming' ? 'Upcoming soon' : category === 'top_rated' ? 'Top 10' : 'Airing today'} />
                 <SmallLinkButton text='Show more' disabled={false} handleClick={handleClick} />
             </div>
             <MoviesCardSwiper>

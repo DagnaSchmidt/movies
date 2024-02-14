@@ -1,9 +1,9 @@
 "use client"
 
-import CarouselSection from "../components/sections/carouselSection";
 //components
 import ArticlesSection from "../components/sections/home/articlesSection";
 import FollowUsSection from "../components/sections/home/followUsSection";
+import CarouselSection from "../components/sections/carouselSection";
 
 
 export default function Home() {
@@ -21,7 +21,9 @@ export default function Home() {
 
             <CarouselSection type='movie' category="upcoming" />
 
-            <FollowUsSection />
+            {/* PICKS FOR YOU */}
+
+            {/* MOST POPULAR MOVIE ROLES */}
 
         </main>
     );

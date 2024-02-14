@@ -4,6 +4,7 @@ import { merriweather } from "./fonts";
 //components
 import TopNav from "../components/navs/topNav/topNav";
 import BottomNav from "../components/navs/bottomNav/bottomNav";
+import FollowUsSection from "../components/sections/home/followUsSection";
 
 export const metadata = {
     title: 'Movies4you',
@@ -21,6 +22,7 @@ export default function RootLayout({
                 <div className="bg-black flex flex-col items-center">
                     <TopNav />
                     {children}
+                    <FollowUsSection />
                     <BottomNav />
                 </div>
             </body>

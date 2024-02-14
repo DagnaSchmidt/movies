@@ -41,7 +41,7 @@ export default function Page({ params }: { params: { id: number } }) {
 
     if (data !== null && !isLoading) {
         return (
-            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7">
+            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7 pb-8">
                 <SingleMovieHeader {...data} />
 
                 <RatingsSection type='movies' id={params.id} />
@@ -52,6 +52,14 @@ export default function Page({ params }: { params: { id: number } }) {
                     <SingleSerieDetails {...data} />
                     <SingleMovieGenres data={data.genres} />
                 </div>
+
+                {/* VIDEOS SLIDER */}
+
+                {/* CAST */}
+
+                {/* REVIEWS */}
+
+                {/* SUGGESTIONS */}
             </div>
         )
     }

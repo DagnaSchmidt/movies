@@ -1,9 +1,11 @@
+import { TGenreProps } from "./Shared"
+
 export type TSingleMovieProps = {
     adult: boolean,
     backdrop_path: string,
     belongs_to_collection: null,
     budget: number,
-    genres: object[],
+    genres: TGenreProps[],
     homepage: string,
     id: number,
     imdb_id: string,

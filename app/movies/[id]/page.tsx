@@ -40,18 +40,25 @@ export default function Page({ params }: { params: { id: number } }) {
 
     if (data !== null && !isLoading) {
         return (
-            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7">
+            <div className="min-h-screen w-screen max-w-[1024px] flex flex-col items-center md:px-12 gap-7 pb-8">
                 <SingleMovieHeader {...data} />
 
                 <RatingsSection type='movies' id={params.id} />
 
                 <TextSection title="Short description" text={data.overview} />
 
-                <div className="flex flex-col md:flex-row gap-6 w-full">
+                <div className="flex flex-col md:flex-row gap-6 w-full pt-6">
                     <SingleMovieDetails {...data} />
-                    <SingleMovieGenres />
+                    <SingleMovieGenres data={data.genres} />
                 </div>
 
+                {/* VIDEOS SLIDER */}
+
+                {/* CAST */}
+
+                {/* REVIEWS */}
+
+                {/* SUGGESTIONS */}
             </div>
         )
     };

@@ -53,7 +53,7 @@ export type TSingleSerieProps = {
     id: number,
     in_production: boolean,
     languages: string[],
-    last_air_date: Date,
+    last_air_date: string,
     last_episode_to_air: TSerieEpisodeProps,
     name: string,
     next_episode_to_air: TSerieEpisodeProps | null,

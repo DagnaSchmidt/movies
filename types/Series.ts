@@ -1,3 +1,5 @@
+import { TGenreProps } from "./Shared";
+
 export type TSerieEpisodeProps = {
     id: number,
     name: string,
@@ -48,7 +50,7 @@ export type TSingleSerieProps = {
     created_by: object[],
     episode_run_time: number[],
     first_air_date: string,
-    genres: object[],
+    genres: TGenreProps[],
     homepage: string,
     id: number,
     in_production: boolean,

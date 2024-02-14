@@ -47,9 +47,9 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 <TextSection title="Short description" text={data.overview} />
 
-                <div className="flex flex-col md:flex-row gap-6 w-full">
+                <div className="flex flex-col md:flex-row gap-6 w-full pt-6">
                     <SingleMovieDetails {...data} />
-                    <SingleMovieGenres />
+                    <SingleMovieGenres data={data.genres} />
                 </div>
 
             </div>

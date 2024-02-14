@@ -8,6 +8,7 @@ import SingleMovieHeader from "../../../components/sections/movies/singleMovieHe
 //types
 import { TSingleMovieProps } from "../../../types/Movies";
 import RatingsSection from "../../../components/sections/ratingsSection";
+import TextSection from "../../../components/sections/textSection";
 
 export default function Page({ params }: { params: { id: number } }) {
     const id = 866398;
@@ -43,7 +44,7 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 <RatingsSection type='movies' id={params.id} />
 
-                {/* description */}
+                <TextSection title="Short description" text={data.overview} />
 
                 {/* segment picker */}
 

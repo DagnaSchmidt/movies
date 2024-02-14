@@ -4,18 +4,18 @@ import { getSingleMovieData } from "../../../services/movies";
 
 //components
 import SingleMovieHeader from "../../../components/sections/movies/singleMovieHeader";
-
-//types
-import { TSingleMovieProps } from "../../../types/Movies";
 import RatingsSection from "../../../components/sections/ratingsSection";
 import TextSection from "../../../components/sections/textSection";
 import SingleMovieDetails from "../../../components/sections/movies/singleMovieDetails";
+import SingleMovieGenres from "../../../components/sections/movies/singleMovieGenres";
+
+//types
+import { TSingleMovieProps } from "../../../types/Movies";
+
 
 export default function Page({ params }: { params: { id: number } }) {
-    const id = 866398;
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<TSingleMovieProps | null>(null);
-    console.log(data);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -49,7 +49,7 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 <div className="flex flex-col md:flex-row gap-6 w-full">
                     <SingleMovieDetails {...data} />
-                    {/* genres */}
+                    <SingleMovieGenres />
                 </div>
 
             </div>

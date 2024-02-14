@@ -14,7 +14,7 @@ export default function MovieCard(props: TMovieCardProps) {
     return (
         <Link
             className="w-32 h-48 hover:cursor-pointer"
-            href={'title' in props ? `/movies/${id}` : `/series/$id`}
+            href={'title' in props ? `/movies/${id}` : `/series/${id}`}
         >
             <div className="w-32 h-48 relative rounded-lg overflow-hidden group">
                 <Image

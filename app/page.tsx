@@ -2,7 +2,6 @@
 
 //components
 import ArticlesSection from "../components/sections/home/articlesSection";
-import FollowUsSection from "../components/sections/home/followUsSection";
 import CarouselSection from "../components/sections/carouselSection";
 
 

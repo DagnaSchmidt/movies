@@ -6,6 +6,9 @@ import TopNav from "../components/navs/topNav/topNav";
 import BottomNav from "../components/navs/bottomNav/bottomNav";
 import FollowUsSection from "../components/sections/home/followUsSection";
 
+//providers
+import Providers from "./providers/providers";
+
 export const metadata = {
     title: 'Movies4you',
     description: 'Website with movies database.'
@@ -19,12 +22,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={merriweather.className}>
-                <div className="bg-black flex flex-col items-center">
-                    <TopNav />
-                    {children}
-                    <FollowUsSection />
-                    <BottomNav />
-                </div>
+                <Providers>
+                    <div className="bg-black flex flex-col items-center">
+                        <TopNav />
+                        {children}
+                        <FollowUsSection />
+                        <BottomNav />
+                    </div>
+                </Providers>
             </body>
         </html>
     );

@@ -6,12 +6,8 @@ import SwiperButton from "../buttons/swiperButton";
 //hooks
 import useDeviceWidth from "../../hooks/useDeviceWidth";
 
-interface IMoviesCardSwiperProps {
-    children: ReactNode
-};
 
-
-const MoviesCardSwiper: React.FC<IMoviesCardSwiperProps> = ({ children }) => {
+export default function MoviesCardSwiper({ children }: { children: ReactNode }) {
     const deviceWidth = useDeviceWidth();
     const elementRef = useRef<HTMLDivElement>(null);
 
@@ -58,5 +54,3 @@ const MoviesCardSwiper: React.FC<IMoviesCardSwiperProps> = ({ children }) => {
         </div>
     )
 };
-
-export default MoviesCardSwiper;

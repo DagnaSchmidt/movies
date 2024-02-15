@@ -11,6 +11,5 @@ export default function Providers({ children }: { children: ReactNode }) {
                 {children}
             </SearchContext.Provider>
         </UserContext.Provider>
-
     )
 };

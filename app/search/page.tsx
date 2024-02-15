@@ -48,7 +48,7 @@ export default function SearchPage() {
 
     if (data !== null && !isLoading) {
         return (
-            <main className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+            <main className="min-h-screen w-screen max-w-[1024px] grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 px-6 md:px-12 pb-8">
                 {
                     data.map(i => <SearchItemCard {...i} key={i.id} />)
                 }

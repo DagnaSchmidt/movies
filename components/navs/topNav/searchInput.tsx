@@ -1,7 +1,9 @@
 "use client"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
+
+import { useSearchContext } from "../../../app/providers/providers";
 
 import { RiSearchLine } from "react-icons/ri";
 
@@ -10,7 +12,7 @@ export default function SearchInput() {
     const pathname = usePathname();
 
     const [isHidden, setIsHidden] = useState<boolean>(true);
-    const [inputData, setInputData] = useState<string>('');
+    const [inputData, setInputData] = useSearchContext();
     console.log(inputData);
 
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {

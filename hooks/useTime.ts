@@ -3,7 +3,7 @@ export default function useTime(minutes: number) {
         return `${minutes} min`;
     } else {
         let hours = Math.floor(minutes / 60);
-        let restMinutes = minutes - (hours * 60);
+        let restMinutes = Math.floor(minutes % 60);
         return `${hours}h ${restMinutes}min`;
     }
 };

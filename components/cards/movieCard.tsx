@@ -23,6 +23,7 @@ export default function MovieCard(props: TMovieCardProps) {
                     fill
                     sizes="128px"
                     className="object-cover rounded-lg"
+                    priority
                 />
                 <div className="absolute right-0 top-0">
                     <BookmarkIcon id={id} />

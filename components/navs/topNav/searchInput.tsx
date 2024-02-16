@@ -13,7 +13,6 @@ export default function SearchInput() {
 
     const [isHidden, setIsHidden] = useState<boolean>(true);
     const [inputData, setInputData] = useSearchContext();
-    console.log(inputData);
 
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
         const newValue = e.currentTarget.value;

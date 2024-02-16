@@ -5,6 +5,8 @@ import Image from "next/image";
 import { TSingleMovieProps } from "../../types/Movies";
 import { TSingleSerieProps } from "../../types/Series";
 import { TSinglePersonProps } from "../../types/Peoples";
+
+//components
 import H3 from "../texts/h3";
 import BodyText from "../texts/bodyText";
 

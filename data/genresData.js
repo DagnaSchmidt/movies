@@ -8,6 +8,10 @@ export const genresData = [
         "name": "Animation"
     },
     {
+        "id": 35,
+        "name": "Comedy"
+    },
+    {
         "id": 18,
         "name": "Drama"
     },
@@ -26,6 +30,10 @@ export const genresData = [
     {
         "id": 878,
         "name": "Science Fiction"
+    },
+    {
+        "id": 53,
+        "name": "Thriller"
     },
     {
         "id": 37,

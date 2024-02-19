@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 
 //types
-import { TFilterProps } from "../../types/Filter";
 import { TSingleMovieProps } from "../../types/Movies";
 import { TSingleSerieProps } from "../../types/Series";
 
@@ -13,8 +12,11 @@ import SearchItemCard from "../../components/cards/searchItemCard";
 //services
 import { getDiscoverMovieWithoutFilters } from "../../services/discover";
 
+
 export default function RankingPage() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [displayData, setDisplayData] = useState<TSingleMovieProps[] | TSingleSerieProps[] | null>(null);
+    console.log(displayData);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,21 +31,10 @@ export default function RankingPage() {
         fetchData();
     }, []);
 
-    const [filterData, setFilterData] = useState<TFilterProps>({
-        type: "movies",
-        genres: [],
-        country: "",
-        year: 0,
-        VOD: []
-    });
-
-    const [displayData, setDisplayData] = useState<TSingleMovieProps[] | TSingleSerieProps[] | null>(null);
 
     return (
         <main className="flex h-full w-screen max-w-[1024px] flex-col gap-10 items-center md:px-12 bg-black relative">
-            <form className="w-full">
-                <FilterSection filterData={filterData} setFilterData={setFilterData} />
-            </form>
+            <FilterSection setIsLoading={setIsLoading} setDisplayData={setDisplayData} />
 
             {
                 isLoading ?

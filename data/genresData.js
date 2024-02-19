@@ -39,5 +39,4 @@ export const genresData = [
         "id": 37,
         "name": "Western"
     }
-
 ]

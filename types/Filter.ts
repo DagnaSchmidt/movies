@@ -9,4 +9,4 @@ export type TFilterPropsEdited = {
     genres: string | null,
     year: number | null,
     VOD: string | null
-}
+};

@@ -1,8 +1,8 @@
 //types
-import { TFilterProps } from "../../../types/Filter"
+import { TFilterProps } from "../../../types/Filter";
 
 //components
-import Chip from "../../buttons/chip"
+import Chip from "../../buttons/chip";
 
 interface IYearsProps {
     filterData: TFilterProps,

@@ -32,20 +32,46 @@ export default function FilterSection(props: IFilterSection) {
         VOD: null
     });
 
-    const handleUpdateGenres = () => {
+    console.log(filterData);
 
+    const handleUpdateGenres = (id: number) => {
+        if (filterData.genres === null) {
+            const newGenres = [id];
+            setFilterData({ ...filterData, genres: newGenres });
+        } else if (filterData.genres.includes(id) === true) {
+            const newGenres = filterData.genres.filter(i => i !== id);
+            setFilterData({ ...filterData, genres: newGenres });
+        } else {
+            const newGenres = [...filterData.genres, id];
+            setFilterData({ ...filterData, genres: newGenres });
+        }
     }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
-        console.log('submitted!');
+
+        const editGenres = (genres: null | number[]): null | string => {
+            if (genres === null) {
+                return null;
+            } else {
+                let result = '';
+                for (let i = 0; i < genres.length; i++) {
+                    if (i === 0) {
+                        result = genres[i].toString();
+                    } else {
+                        result = result + '%2C%20' + genres[i].toString();
+                    }
+                }
+                return result;
+            }
+        }
 
         const editedFilterData: TFilterPropsEdited = {
-            genres: null,
+            genres: editGenres(filterData.genres),
             year: filterData.year,
             VOD: null
-        }
+        };
 
         if (filterData.type === "movies") {
             try {
@@ -64,7 +90,9 @@ export default function FilterSection(props: IFilterSection) {
                 console.log('error on fetching single movie data');
             }
         }
+
     }
+
 
     return (
         <form className="w-full flex flex-col gap-4 md:gap-2" onSubmit={handleSubmit}>
@@ -98,8 +126,8 @@ export default function FilterSection(props: IFilterSection) {
                             return (
                                 <Chip
                                     text={i.name}
-                                    active={filterData.genres === null ? false : filterData.genres.includes(i.id)}
-                                    handleClick={() => handleUpdateGenres()}
+                                    active={filterData.genres === null ? false : filterData.genres.includes(i.id) ? true : false}
+                                    handleClick={() => handleUpdateGenres(i.id)}
                                     key={i.id}
                                 />
                             )
@@ -129,7 +157,7 @@ export default function FilterSection(props: IFilterSection) {
                 </div>
             </div>
 
-            <SmallLinkButton text="filter" disabled={false} handleClick={() => console.log('clicked')} />
+            {/* <SmallLinkButton text="filter" disabled={false} handleClick={() => console.log('clicked')} /> */}
 
         </form>
     )

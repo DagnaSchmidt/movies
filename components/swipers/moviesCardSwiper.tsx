@@ -9,6 +9,7 @@ import useDeviceWidth from "../../hooks/useDeviceWidth";
 
 export default function MoviesCardSwiper({ children }: { children: ReactNode }) {
     const deviceWidth = useDeviceWidth();
+    console.log(deviceWidth);
     const elementRef = useRef<HTMLDivElement>(null);
 
     const [isArrowDisabled, setIsArrowDisabled] = useState(false);

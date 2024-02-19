@@ -8,7 +8,7 @@ export default function BottomNav() {
                 <BottomNavItem navIcon="Home" navTitle="home" path="/" />
                 <BottomNavItem navIcon="CameraLens" navTitle="movies" path="/movies" />
                 <BottomNavItem navIcon="VideoLine" navTitle="series" path="/series" />
-                <BottomNavItem navIcon="ChartBoxLine" navTitle="ranking" path="/" />
+                <BottomNavItem navIcon="ChartBoxLine" navTitle="ranking" path="/ranking" />
                 <BottomNavItem navIcon="BookmarkLine" navTitle="list" path="/" />
             </div>
         </nav>

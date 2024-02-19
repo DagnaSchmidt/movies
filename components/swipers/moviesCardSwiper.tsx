@@ -34,7 +34,7 @@ export default function MoviesCardSwiper({ children }: { children: ReactNode }) 
     };
 
     return (
-        <div className="w-full h-48 px-4 md:px-0 relative" >
+        <div className="w-full h-48 md:px-0 relative" >
             {
                 deviceWidth > 767 &&
                 <div className="absolute top-20 left-0 z-40">
@@ -42,7 +42,7 @@ export default function MoviesCardSwiper({ children }: { children: ReactNode }) 
                 </div>
             }
 
-            <div className="flex gap-3 overflow-x-scroll scrollbar-hide w-full h-48" ref={elementRef}>
+            <div className="flex gap-3 pl-4 overflow-x-scroll scrollbar-hide w-full h-48" ref={elementRef}>
                 {children}
             </div>
 

@@ -22,7 +22,6 @@ export default function SearchPage() {
 
     const [inputData, setInputData] = useSearchContext();
 
-    console.log(data);
 
     useEffect(() => {
         const fetchData = async () => {

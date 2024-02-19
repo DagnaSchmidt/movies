@@ -4,7 +4,6 @@ import { useState } from "react";
 //components
 import Chip from "../../buttons/chip";
 import BodyText from "../../texts/bodyText";
-import SmallLinkButton from "../../buttons/smallLinkButton";
 
 //types
 import { TFilterProps, TFilterPropsEdited } from "../../../types/Filter";

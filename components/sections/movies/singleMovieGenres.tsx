@@ -18,7 +18,7 @@ export default function SingleMovieGenres(props: ISingleMovieGenres) {
             <H3 title="Genres" />
             <div className="flex flex-wrap gap-4">
                 {
-                    data.map(i => <Chip text={i.name} key={i.id} />)
+                    data.map(i => <Chip text={i.name} key={i.id} active={false} handleClick={() => console.log('')} />)
                 }
             </div>
         </section>

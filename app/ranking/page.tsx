@@ -13,9 +13,10 @@ import SearchItemCard from "../../components/cards/searchItemCard";
 import { getDiscoverMovieWithoutFilters } from "../../services/discover";
 
 
-export default function RankingPage() {
+export default function Page() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [displayData, setDisplayData] = useState<TSingleMovieProps[] | TSingleSerieProps[] | null>(null);
+
     console.log(displayData);
 
     useEffect(() => {
@@ -42,7 +43,7 @@ export default function RankingPage() {
                         skeleton here
                     </div>
                     : displayData !== null &&
-                    <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+                    <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 px-6 md:px-0">
                         {
                             displayData.map(i => <SearchItemCard {...i} key={i.id} />)
                         }

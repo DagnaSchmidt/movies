@@ -25,7 +25,7 @@ export const getDiscoverMovie = async (data: TFilterPropsEdited) => {
 export const getDiscoverSerie = async (data: TFilterPropsEdited) => {
     const { genres, year, VOD } = data;
 
-    const url = `https://api.themoviedb.org/3/discover/tv?${year === null ? '' : `first_air_date_year=${year}`}include_null_first_air_dates=false&language=en-US&page=1&&sort_by=popularity.desc${genres === null ? '' : `&with_genres=${genres}`}${VOD === null ? '' : `&with_watch_providers=netflix`}`;
+    const url = `https://api.themoviedb.org/3/discover/tv?${year === null ? '' : `first_air_date_year=${year}&`}include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc${genres === null ? '' : `&with_genres=${genres}`}${VOD === null ? '' : `&with_watch_providers=netflix`}`;
 
     const response = await axios.get(url, config);
     return response.data.results.slice(0, 10);

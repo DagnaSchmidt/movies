@@ -1,4 +1,27 @@
-export const genresData = [
+export const seriesGenresData = [
+    {
+        "id": 16,
+        "name": "Animation"
+    },
+    {
+        "id": 35,
+        "name": "Comedy"
+    },
+    {
+        "id": 18,
+        "name": "Drama"
+    },
+    {
+        "id": 9648,
+        "name": "Mystery"
+    },
+    {
+        "id": 37,
+        "name": "Western"
+    }
+]
+
+export const movieGenresData = [
     {
         "id": 28,
         "name": "Action"

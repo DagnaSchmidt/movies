@@ -7,7 +7,7 @@ import Chip from "../../buttons/chip";
 
 interface ISingleMovieGenres {
     data: TGenreProps[]
-}
+};
 
 
 export default function SingleMovieGenres(props: ISingleMovieGenres) {

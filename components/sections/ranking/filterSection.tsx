@@ -13,6 +13,7 @@ import { TFilterProps, TFilterPropsEdited } from "../../../types/Filter";
 
 //services
 import { getDiscoverMovie, getDiscoverSerie } from "../../../services/discover";
+import Vod from "./vod";
 
 
 interface IFilterSection {
@@ -49,12 +50,20 @@ export default function FilterSection(props: IFilterSection) {
                 }
                 return result;
             }
-        }
+        };
+
+        const editVOD = (vod: null | number): null | string => {
+            if (vod === null) {
+                return null;
+            } else {
+                return vod.toString();
+            }
+        };
 
         const editedFilterData: TFilterPropsEdited = {
             genres: editGenres(filterData.genres),
             year: filterData.year,
-            VOD: null
+            VOD: editVOD(filterData.VOD)
         };
 
         if (filterData.type === "movies") {
@@ -82,7 +91,7 @@ export default function FilterSection(props: IFilterSection) {
         <form className="w-full flex flex-col gap-4 md:gap-2 md:px-0" onSubmit={handleSubmit}>
 
             <div className="flex flex-col md:flex-row md:items-center gap-2 px-4 md:px-0">
-                <div className="w-16">
+                <div className="min-w-16">
                     <BodyText text="Type" />
                 </div>
                 <div className="flex gap-2">
@@ -100,29 +109,32 @@ export default function FilterSection(props: IFilterSection) {
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center gap-2">
-                <div className="w-16 pl-4 md:pl-0">
+                <div className="min-w-16 pl-4 md:pl-0">
                     <BodyText text="Genres" />
                 </div>
                 <Genres filterData={filterData} setFilterData={setFilterData} />
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center gap-2">
-                <div className="w-16 pl-4 md:pl-0">
+                <div className="min-w-16 pl-4 md:pl-0">
                     <BodyText text="Year" />
                 </div>
                 <Years filterData={filterData} setFilterData={setFilterData} />
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-center gap-2">
-                <div className="w-16 pl-4 md:pl-0">
-                    <BodyText text="VOD" />
-                </div>
+            {
+                filterData.type === "series" &&
 
-                <div className="flex gap-2 pl-4">
-                    <Chip text="Movies" active={false} handleClick={() => setFilterData({ ...filterData })} />
-                    <Chip text="Series" active={false} handleClick={() => setFilterData({ ...filterData })} />
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
+                    <div className="min-w-16 pl-4 md:pl-0">
+                        <BodyText text="VOD" />
+                    </div>
+
+                    <div className="flex gap-2 pl-4 md:pl-0">
+                        <Vod filterData={filterData} setFilterData={setFilterData} />
+                    </div>
                 </div>
-            </div>
+            }
 
             <div className="self-end">
                 <SmallLinkButton text="reset filters" disabled={false} handleClick={() => setFilterData({ type: "movies", genres: null, year: null, VOD: null })} />

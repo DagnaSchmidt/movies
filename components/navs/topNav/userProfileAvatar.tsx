@@ -2,18 +2,25 @@
 import { useState } from "react";
 import Link from "next/link";
 
+import { useModalContext } from "../../../app/providers/providers";
+
 //components
 import Icon from "../../icons/icon";
 
 export default function UserProfileAvatar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useModalContext();
+
 
     if (!isLoggedIn) {
         return (
-            <div className="flex flex-col gap-1 justify-center items-center hover:cursor-pointer">
+            <button
+                className="flex flex-col gap-1 justify-center items-center hover:cursor-pointer"
+                onClick={() => setIsModalOpen(true)}
+            >
                 <Icon name='User' fill='fill-white' />
                 <p className="text-xs text-white">login</p>
-            </div>
+            </button>
         )
     } else {
         return (

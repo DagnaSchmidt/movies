@@ -19,7 +19,7 @@ import Vod from "./vod";
 interface IFilterSection {
     setDisplayData: Function,
     setIsLoading: Function
-}
+};
 
 
 export default function FilterSection(props: IFilterSection) {

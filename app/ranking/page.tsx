@@ -17,8 +17,6 @@ export default function Page() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [displayData, setDisplayData] = useState<TSingleMovieProps[] | TSingleSerieProps[] | null>(null);
 
-    console.log(displayData);
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -36,7 +34,6 @@ export default function Page() {
     return (
         <main className="flex h-full w-screen max-w-[1024px] flex-col gap-10 items-center md:px-12 bg-black relative">
             <FilterSection setIsLoading={setIsLoading} setDisplayData={setDisplayData} />
-
             {
                 isLoading ?
                     <div>
@@ -49,7 +46,6 @@ export default function Page() {
                         }
                     </section>
             }
-
         </main>
     )
 };

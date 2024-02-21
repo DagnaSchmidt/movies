@@ -8,6 +8,7 @@ import FollowUsSection from "../components/sections/home/followUsSection";
 
 //providers
 import Providers from "./providers/providers";
+import LoginModal from "../components/login/loginModal";
 
 export const metadata = {
     title: 'Movies4you',
@@ -23,11 +24,12 @@ export default function RootLayout({
         <html lang="en">
             <body className={merriweather.className}>
                 <Providers>
-                    <div className="bg-black flex flex-col items-center">
+                    <div className="bg-black flex flex-col items-center relative">
                         <TopNav />
                         {children}
                         <FollowUsSection />
                         <BottomNav />
+                        <LoginModal />
                     </div>
                 </Providers>
             </body>

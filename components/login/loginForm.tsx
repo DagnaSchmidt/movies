@@ -21,24 +21,19 @@ export default function LoginForm(props: ILoginFormProps) {
                 onSubmit={handleLogin}
                 className="flex flex-col gap-2 pt-8"
             >
-                <label
-                    className="text-white text-sm font-regular"
-                >
-                    Email
-                </label>
+                <label className="text-white text-sm font-regular">Email</label>
                 <input
                     type="email"
                     className="h-11 w-full max-w-[640px] bg-extra-light focus:outline-none rounded-xl placeholder:text-neutral focus:border-b-[1px] focus:border-b-primary text-white pl-3"
                 />
-                <label
-                    className="text-white text-sm font-regular"
-                >
-                    Password
-                </label>
+
+                <label className="text-white text-sm font-regular">Password</label>
                 <input
                     type="password"
                     className="h-11 w-full max-w-[640px] bg-extra-light focus:outline-none rounded-xl placeholder:text-neutral focus:border-b-[1px] focus:border-b-primary text-white pl-3"
                 />
+
+
                 <div className="w-full flex justify-center">
                     <LinkButton firstText="Don't have an account?" secondText="Sign up" handleClick={() => setRegister(true)} disabled={false} />
                 </div>

@@ -2,7 +2,7 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
 const SearchContext = createContext([]);
-const UserContext = createContext({});
+const UserContext = createContext([]);
 const ModalContext = createContext([]);
 
 export default function Providers({ children }: { children: ReactNode }) {

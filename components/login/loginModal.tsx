@@ -3,9 +3,6 @@
 import Icon from "../icons/icon";
 
 import { useModalContext } from "../../app/providers/providers";
-import H2 from "../texts/h2";
-import MainButton from "../buttons/mainButton";
-import LinkButton from "../buttons/linkButton";
 import { useState } from "react";
 import RegisterForm from "./registerForm";
 import LoginForm from "./loginForm";

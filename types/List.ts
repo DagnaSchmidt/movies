@@ -22,7 +22,7 @@ export type TMovieProps = {
     vote_average: number,
     vote_count: number,
     key: number
-}
+};
 
 export type TSerieProps = {
     backdrop_path: string,
@@ -39,6 +39,6 @@ export type TSerieProps = {
     vote_average: number,
     vote_count: number,
     key: number
-}
+};
 
 export type TMovieCardProps = TMovieProps | TSerieProps | null;

@@ -1,4 +1,5 @@
-import { TGenreProps } from "./Shared"
+import { TGenreProps, TCompanyProps, TProductionCountryProps, TSpokenLanguagesProps } from "./Shared";
+
 
 export type TSingleMovieProps = {
     adult: boolean,
@@ -14,12 +15,12 @@ export type TSingleMovieProps = {
     overview: string,
     popularity: number,
     poster_path: string,
-    production_companies: object[],
-    production_countries: object[],
+    production_companies: TCompanyProps[],
+    production_countries: TProductionCountryProps[],
     release_date: string,
     revenue: number,
     runtime: number,
-    spoken_languages: object[],
+    spoken_languages: TSpokenLanguagesProps[],
     status: string,
     tagline: string,
     title: string,

@@ -14,3 +14,11 @@ export type TSinglePersonProps = {
     popularity: number,
     profile_path: string
 }
+
+export type TCreatorProps = {
+    id: number,
+    credit_id: string,
+    name: string,
+    gender: 1 | 2,
+    profile_path: string
+};

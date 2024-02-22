@@ -1,4 +1,5 @@
-import { TGenreProps } from "./Shared";
+import { TGenreProps, TCompanyProps, TProductionCountryProps, TSpokenLanguagesProps } from "./Shared";
+import { TCreatorProps } from "./Peoples";
 
 export type TSerieEpisodeProps = {
     id: number,
@@ -26,28 +27,10 @@ export type TSerieSeasonProps = {
     vote_average: number
 };
 
-export type TSerieCompanyProps = {
-    id: number,
-    logo_path: string,
-    name: string,
-    origin_country: string
-};
-
-export type TSerieProductionCountryProps = {
-    iso_3166_1: string,
-    name: string
-};
-
-export type TLanguageProps = {
-    "english_name": string,
-    "iso_639_1": string,
-    "name": string
-}
-
 export type TSingleSerieProps = {
     adult: boolean,
     backdrop_path: string,
-    created_by: object[],
+    created_by: TCreatorProps[],
     episode_run_time: number[],
     first_air_date: string,
     genres: TGenreProps[],
@@ -59,7 +42,7 @@ export type TSingleSerieProps = {
     last_episode_to_air: TSerieEpisodeProps,
     name: string,
     next_episode_to_air: TSerieEpisodeProps | null,
-    networks: TSerieCompanyProps,
+    networks: TCompanyProps,
     number_of_episodes: number,
     number_of_seasons: number,
     origin_country: string[],
@@ -68,13 +51,13 @@ export type TSingleSerieProps = {
     overview: string,
     popularity: number,
     poster_path: string,
-    production_companies: TSerieCompanyProps[],
-    production_countries: TSerieProductionCountryProps[],
+    production_companies: TCompanyProps[],
+    production_countries: TProductionCountryProps[],
     seasons: TSerieSeasonProps[],
-    spoken_languages: TLanguageProps[],
+    spoken_languages: TSpokenLanguagesProps[],
     status: string,
     tagline: string,
     type: string,
     vote_average: number,
     vote_count: number
-}
+};

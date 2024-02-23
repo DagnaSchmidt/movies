@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { getSingleMovieData } from "../../../services/movies";
+import { getSingleMovieCast, getSingleMovieData } from "../../../services/movies";
 
 //components
 import SingleMovieHeader from "../../../components/sections/movies/singleMovieHeader";
@@ -11,17 +11,22 @@ import SingleMovieGenres from "../../../components/sections/movies/singleMovieGe
 
 //types
 import { TSingleMovieProps } from "../../../types/Movies";
+import { TCastProps } from "../../../types/Peoples";
+import SingleMovieCast from "../../../components/sections/movies/singleMovieCast";
 
 
 export default function Page({ params }: { params: { id: number } }) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<TSingleMovieProps | null>(null);
+    const [cast, setCast] = useState<TCastProps[] | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const newData = await getSingleMovieData(params.id);
+                const newCast = await getSingleMovieCast(params.id);
                 setData(newData);
+                setCast(newCast);
                 setIsLoading(false);
             } catch (error) {
                 console.log('error on fetching single movie data');
@@ -53,6 +58,11 @@ export default function Page({ params }: { params: { id: number } }) {
                 </div>
 
                 {/* VIDEOS SLIDER */}
+
+                {
+                    cast &&
+                    <SingleMovieCast cast={cast} />
+                }
 
                 {/* CAST */}
 

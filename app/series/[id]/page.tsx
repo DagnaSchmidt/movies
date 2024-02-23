@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { getSingleSerieData } from "../../../services/series";
+import { getSingleSerieCast, getSingleSerieData } from "../../../services/series";
 
 //components
 import SingleMovieHeader from "../../../components/sections/movies/singleMovieHeader";
@@ -8,20 +8,26 @@ import RatingsSection from "../../../components/sections/ratingsSection";
 import TextSection from "../../../components/sections/textSection";
 import SingleMovieGenres from "../../../components/sections/movies/singleMovieGenres";
 import SingleSerieDetails from "../../../components/sections/series/singleSerieDetails";
+import SingleMovieCast from "../../../components/sections/movies/singleMovieCast";
 
 //types
 import { TSingleSerieProps } from "../../../types/Series";
+import { TCastProps } from "../../../types/Peoples";
 
 
 export default function Page({ params }: { params: { id: number } }) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<TSingleSerieProps | null>(null);
+    const [cast, setCast] = useState<TCastProps[] | null>(null);
+
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const newData = await getSingleSerieData(params.id);
+                const newCast = await getSingleSerieCast(params.id);
                 setData(newData);
+                setCast(newCast);
                 setIsLoading(false);
             } catch (error) {
                 console.log('error on fetching single serie data');
@@ -55,7 +61,10 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 {/* VIDEOS SLIDER */}
 
-                {/* CAST */}
+                {
+                    cast &&
+                    <SingleMovieCast cast={cast} />
+                }
 
                 {/* REVIEWS */}
 

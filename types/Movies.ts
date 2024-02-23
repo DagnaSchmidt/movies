@@ -27,4 +27,4 @@ export type TSingleMovieProps = {
     video: boolean,
     vote_average: number,
     vote_count: number
-}
+};

@@ -7,3 +7,9 @@ export const getSingleCharacter = async (id: number) => {
     const response = await axios.get(url, config);
     return response.data;
 };
+
+export const getSingleCharacterImages = async (id: number) => {
+    const url = `https://api.themoviedb.org/3/person/${id}/images`;
+    const response = await axios.get(url, config);
+    return response.data.profiles;
+};

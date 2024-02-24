@@ -16,8 +16,6 @@ export const getDiscoverMovie = async (data: TFilterPropsEdited) => {
 
     const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&${year === null ? '' : `primary_release_year=${year}`}&sort_by=popularity.desc${genres === null ? '' : `&with_genres=${genres}`}${VOD === null ? '' : `&with_watch_providers=netflix`}`;
 
-    console.log(url);
-
     const response = await axios.get(url, config);
     return response.data.results.slice(0, 10);
 };

@@ -13,8 +13,6 @@ interface ISingleMovieCast {
 
 export default function SingleMovieCast(props: ISingleMovieCast) {
     const { cast } = props;
-    console.log(cast);
-
 
     const handleClick = () => {
 

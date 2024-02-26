@@ -13,7 +13,7 @@ import BodyText from "../texts/bodyText";
 export default function SearchItemCard(props: TSingleMovieProps | TSingleSerieProps | TSinglePersonProps) {
 
     return (
-        <Link href={'title' in props ? `/movies/${props.id}` : `/series/${props.id}`} >
+        <Link href={'title' in props ? `/movies/${props.id}` : 'gender' in props ? `/character/${props.id}` : `/series/${props.id}`} >
             <div className="w-full bg-light rounded-lg h-28 flex gap-1">
                 <Image
                     src={`https://image.tmdb.org/t/p/original${'poster_path' in props ? props.poster_path : props.profile_path}`}

@@ -5,10 +5,10 @@ import Image from "next/image";
 import { TCastProps } from "../../../types/Peoples";
 
 export default function CastAvatar(props: TCastProps) {
-    const { name, character, profile_path } = props;
+    const { name, character, profile_path, id } = props;
 
     return (
-        <Link href="/">
+        <Link href={`/character/${id}`}>
             <div className="flex flex-col items-center w-28 gap-2">
                 <Image
                     src={`https://image.tmdb.org/t/p/original${profile_path}`}

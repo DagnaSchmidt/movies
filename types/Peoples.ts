@@ -4,7 +4,7 @@ export type TSinglePersonProps = {
     biography: string,
     birthday: 'string',
     deathday: 'string' | null,
-    gender: number,
+    gender: 0 | 1 | 2 | 3,
     homepage: string | null,
     id: number,
     imdb_id: string,
@@ -17,7 +17,7 @@ export type TSinglePersonProps = {
 
 export type TCastProps = {
     adult: boolean,
-    gender: 1 | 2,
+    gender: 0 | 1 | 2 | 3,
     id: number,
     known_for_department: string,
     name: string,
@@ -34,6 +34,6 @@ export type TCreatorProps = {
     id: number,
     credit_id: string,
     name: string,
-    gender: 1 | 2,
+    gender: 0 | 1 | 2 | 3,
     profile_path: string
 };

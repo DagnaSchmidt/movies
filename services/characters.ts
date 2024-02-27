@@ -11,5 +11,12 @@ export const getSingleCharacter = async (id: number) => {
 export const getSingleCharacterImages = async (id: number) => {
     const url = `https://api.themoviedb.org/3/person/${id}/images`;
     const response = await axios.get(url, config);
+    console.log(response.data);
     return response.data.profiles;
+};
+
+export const getSingleCharacterTaggedImages = async (id: number) => {
+    const url = `https://api.themoviedb.org/3/person/${id}/tagged_images?page=1`;
+    const response = await axios.get(url, config);
+    return response.data.results;
 };

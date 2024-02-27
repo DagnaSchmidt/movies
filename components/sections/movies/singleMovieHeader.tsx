@@ -1,7 +1,7 @@
-import Image from "next/image"
+import Image from "next/image";
 
 //types
-import { TSingleMovieProps } from "../../../types/Movies"
+import { TSingleMovieProps } from "../../../types/Movies";
 import { TSingleSerieProps } from "../../../types/Series";
 
 //hooks

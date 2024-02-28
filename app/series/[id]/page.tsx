@@ -61,6 +61,8 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 {/* VIDEOS SLIDER */}
 
+                {/* PHOTOGRAPHS SLIDER */}
+
                 {
                     cast &&
                     <SingleMovieCast cast={cast} />

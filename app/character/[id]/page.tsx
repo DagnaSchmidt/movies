@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 //types
 import { TSinglePersonProps } from "../../../types/Peoples";
@@ -10,6 +9,7 @@ import { getSingleCharacter, getSingleCharacterImages } from "../../../services/
 import SingleCharacterHeader from "../../../components/sections/character/singleCharacterHeader";
 import TextSection from "../../../components/sections/textSection";
 import SingleCharacterDetails from "../../../components/sections/character/singleCharacterDetails";
+import SingleCharacterMovieCredits from "../../../components/sections/character/singleCharacterMovieCredits";
 
 export default function Page({ params }: { params: { id: number } }) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -48,6 +48,10 @@ export default function Page({ params }: { params: { id: number } }) {
                 <TextSection title="Biography" text={data.biography} />
 
                 <SingleCharacterDetails {...data} />
+
+                <SingleCharacterMovieCredits id={params.id} />
+
+                {/* PHOTOGRAPHS */}
             </main>
         )
     }

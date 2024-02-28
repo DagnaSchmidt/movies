@@ -20,3 +20,9 @@ export const getSingleCharacterTaggedImages = async (id: number) => {
     const response = await axios.get(url, config);
     return response.data.results;
 };
+
+export const getSingleCharacterMovieCredits = async (id: number) => {
+    const url = `https://api.themoviedb.org/3/person/${id}/movie_credits?language=en-US`;
+    const response = await axios.get(url, config);
+    return response.data.results;
+};
